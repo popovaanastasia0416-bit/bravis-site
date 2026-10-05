@@ -830,3 +830,40 @@ textarea, select { font: inherit; color: inherit; }
 .fail-note { max-width: 620px; font: 300 18px/27px var(--serif); padding: 16px 24px; background: #fff; border: 1px solid var(--line); }
 .fail-help { font: 300 18px/27px var(--serif); }
 @media (max-width: 760px) { .fail-note, .fail-help { font-size: 16px; line-height: 24px; } }
+
+/* ——— Ноутбуки 761–1440 px: колонки резиновые, на 1440 размеры те же, что в макете ———
+   Раньше блоки были в пикселях под 1440, и на 1280–1366 текст наезжал на фото, а ряд вкусов уезжал вправо. */
+body { overflow-x: clip; } /* декоративные ингредиенты по краям не должны давать горизонтальную прокрутку */
+@media (min-width: 761px) {
+  .flavors { grid-template-columns: repeat(4, minmax(0, 284px)); justify-content: space-between; column-gap: min(48px, 3.4vw); }
+  .flavors-3 { grid-template-columns: repeat(3, minmax(0, 284px)); justify-content: center; }
+  .flavor { min-width: 0; }
+  .arch { width: 100%; height: auto; aspect-ratio: 284 / 379; }
+  .arch .bottle { height: 94%; }
+  .arch .ing { height: 55.4%; }
+  .arch .ing-photo { height: 60.7%; }
+  .facts { grid-template-columns: repeat(3, minmax(0, 365px)); }
+  .split { grid-template-columns: minmax(0, 735fr) minmax(0, 517fr); }
+  .split-text { padding-left: min(72px, 4vw); padding-right: min(72px, 4vw); }
+  .split-text .display { width: auto; max-width: 591px; }
+  .split-text .lead { width: auto; max-width: 495px; }
+  .st-intro { grid-template-columns: minmax(0, 735fr) minmax(0, 408fr); gap: min(137px, 7vw); justify-content: stretch; }
+  .st-photo img { width: 100%; height: auto; aspect-ratio: 408 / 540; }
+  .st-row, .ar-sec { grid-template-columns: minmax(0, 566fr) minmax(0, 626fr); gap: min(88px, 5vw); justify-content: stretch; }
+  .st-row-rev, .ar-sec-rev { grid-template-columns: minmax(0, 626fr) minmax(0, 566fr); }
+  .st-img img, .ar-img img { width: 100%; height: auto; aspect-ratio: 1 / 1; }
+  .st-img-tall img { aspect-ratio: 626 / 760; }
+  .ar-intro { width: min(895px, 100%); }
+  .p-hero { grid-template-columns: minmax(0, 1fr) minmax(0, 626px); }
+  .g-next { left: auto; right: 72px; }
+  .p-flavors { grid-template-columns: minmax(0, 1fr) minmax(0, 408px); }
+  .pf-items { grid-template-columns: repeat(3, minmax(0, 236px)); }
+  .s-grid-3 { grid-template-columns: repeat(3, minmax(0, 395px)); column-gap: min(47px, 3vw); }
+  .cp-card { grid-template-columns: minmax(0, 1fr) minmax(0, 518px); }
+  .cp-text { padding-left: min(88px, 5vw); padding-right: min(88px, 5vw); }
+  .t-card { padding: min(88px, 5vw); gap: min(72px, 4vw); }
+}
+@media (min-width: 761px) {
+  .logos { gap: min(40px, 2.5vw); }
+  .logos img { min-width: 0; max-width: min(180px, 13vw); }
+}
