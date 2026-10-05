@@ -823,8 +823,16 @@ textarea, select { font: inherit; color: inherit; }
 /* колонки сетки не сжимались уже ширины полей — форма вылезала за экран телефона */
 .co-main, .co-sum, .cart-main { min-width: 0; }
 @media (max-width: 760px) { .co, .cart-page { grid-template-columns: minmax(0, 1fr); } .acct-nav { min-width: 0; } .acct { grid-template-columns: minmax(0, 1fr); } }
-/* новый кадр бармена BRAVIS: бутылка левее, чем в кадре CLAVIS — на телефоне держим её целиком */
-@media (max-width: 760px) { .hero-media[src*="bravis/hero-bartender"] { object-position: 75% 50%; } }
+/* видео BRAVIS на телефоне: кадр 16:9 уменьшен так, чтобы бокал с рукой и бутылка (35–82 % ширины кадра)
+   влезли вместе; видео прижато к низу, верх плавно уходит в тёмный фон, текст опущен на затемнённый верх видео.
+   На низких экранах (iPhone SE) видео ужимается ещё, чтобы над ним осталось место под текст */
+@media (max-width: 760px) {
+  .hero:has(video.hero-media) { background: #170904; }
+  video.hero-media { top: auto; bottom: 0; left: 50%; right: auto; width: auto; height: min(calc(205vw * 9 / 16), calc(100% - 290px)); aspect-ratio: 16 / 9; transform: translateX(-58.5%); object-position: 50% 50%;
+    -webkit-mask-image: linear-gradient(180deg, transparent 0, #000 22%); mask-image: linear-gradient(180deg, transparent 0, #000 22%); }
+  .hero:has(video.hero-media)::after { background: none; }
+  .hero:has(video.hero-media) .hero-body { top: auto; bottom: calc(min(calc(205vw * 9 / 16), calc(100% - 290px)) - 20px); }
+}
 /* экран «Оплата не прошла» */
 .fail-ico { background: #B3422F; }
 .fail-note { max-width: 620px; font: 300 18px/27px var(--serif); padding: 16px 24px; background: #fff; border: 1px solid var(--line); }
