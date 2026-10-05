@@ -156,6 +156,7 @@ input::placeholder { color: #5f7a6d; }
 .f-main { display: flex; gap: 36px; margin-top: 88px; font: 600 16px/19.2px var(--sans); letter-spacing: 1.6px; text-transform: uppercase; }
 .social { display: flex; gap: 32px; margin-top: 76px; }
 .social svg { width: 28px; height: 28px; }
+.social a { cursor: default; }
 .f-legal { display: flex; flex-wrap: wrap; justify-content: center; gap: 63px 56px; width: 900px; margin-top: 94px; font: 400 14px/14px var(--sans); text-transform: uppercase; }
 .f-copy { width: 974px; margin-top: 72px; padding-top: 60px; border-top: 1px solid rgba(255,255,255,.2); display: flex; flex-direction: column; gap: 12px; }
 .f-c { font: 400 14px/21px var(--sans); letter-spacing: 1.4px; text-transform: uppercase; }
