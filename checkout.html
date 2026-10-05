@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Оформление заказа — BRAVIS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@500&family=Spectral:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="site.css?v=1791176246">
+</head>
+<body class="inner">
+<div class="announce"><span>BRAVIS на&nbsp;Ozon, Wildberries и&nbsp;Яндекс Маркете</span></div>
+<header class="nav nav-inner">
+  <div class="nav-side">
+    <button class="ico" id="menu-open" aria-label="Меню"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    <a href="shop.html" class="nav-link">Купить</a><a href="story.html" class="nav-link">Наша история</a><a href="recipes.html" class="nav-link">Рецепты</a>
+  </div>
+  <a href="index.html" class="brand" aria-label="BRAVIS"><b class="wm">BRAVIS</b><span>Основы для напитков</span></a>
+  <div class="nav-side nav-right">
+    <a href="where.html" class="nav-link">Где найти</a><a href="journal.html" class="nav-link">Журнал</a>
+    <button class="ico" data-concierge aria-label="ИИ-консьерж"><svg viewBox="0 0 24 24"><path d="M10 4.5c.5 3.6 1.9 5 5.5 5.5-3.6.5-5 1.9-5.5 5.5-.5-3.6-1.9-5-5.5-5.5 3.6-.5 5-1.9 5.5-5.5Z"/><path d="M17.5 13.5c.3 2 1 2.7 3 3-2 .3-2.7 1-3 3-.3-2-1-2.7-3-3 2-.3 2.7-1 3-3Z"/></svg></button>
+    <a href="login.html" class="ico" data-account aria-label="Кабинет"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="10" r="3"/><path d="M6.5 18.2c1.3-2 3.2-3 5.5-3s4.2 1 5.5 3"/></svg></a>
+    <button class="ico ico-cart" data-cart-open aria-label="Корзина"><svg viewBox="0 0 24 24"><path d="M3 4h2.2l2.3 11h10.2L20 7.5H6.3"/><circle cx="9" cy="19" r="1.3"/><circle cx="17" cy="19" r="1.3"/></svg><span class="badge" data-cart-count></span></button>
+  </div>
+</header>
+<button class="fab-ai" data-concierge aria-label="ИИ-консьерж"><svg viewBox="0 0 24 24"><path d="M10 4.5c.5 3.6 1.9 5 5.5 5.5-3.6.5-5 1.9-5.5 5.5-.5-3.6-1.9-5-5.5-5.5 3.6-.5 5-1.9 5.5-5.5Z"/><path d="M17.5 13.5c.3 2 1 2.7 3 3-2 .3-2.7 1-3 3-.3-2-1-2.7-3-3 2-.3 2.7-1 3-3Z"/></svg></button>
+<section class="co">
+  <form class="co-main" data-form="checkout">
+    <h1>Оформление заказа</h1>
+    <ol class="co-steps"><li class="is-on">1. Контакты</li><li>2. Доставка</li><li>3. Оплата</li></ol>
+    <h2 class="co-h">1. Контакты</h2>
+    <div class="co-grid"><label class="fld"><span>Email<i>*</i></span><input type="email" name="email" placeholder="anna@mail.ru" required></label>
+    <label class="fld"><span>Телефон<i>*</i></span><input type="tel" name="phone" placeholder="+7 900 000-00-00" required></label>
+    <label class="fld"><span>Имя<i>*</i></span><input type="text" name="name" placeholder="Анна" required></label>
+    <label class="fld"><span>Фамилия<i>*</i></span><input type="text" name="last" placeholder="Иванова" required></label></div>
+    <h2 class="co-h">2. Доставка</h2>
+    <div class="co-opts"><label class="opt"><input type="radio" name="ship" value="courier" checked><span class="opt-dot"></span><span class="opt-t"><b>Курьер</b><i>Завтра, 10:00–22:00</i></span><span class="opt-p" data-ship-p>390&nbsp;₽</span></label><label class="opt"><input type="radio" name="ship" value="pickup"><span class="opt-dot"></span><span class="opt-t"><b>Пункт выдачи</b><i>2–3 дня, Ozon, Яндекс</i></span><span class="opt-p" data-ship-p>190&nbsp;₽</span></label><label class="opt"><input type="radio" name="ship" value="shop"><span class="opt-dot"></span><span class="opt-t"><b>Самовывоз из&nbsp;магазина</b><i>Москва, ул.&nbsp;Покровка, 17</i></span><span class="opt-p">Бесплатно</span></label></div>
+    <div class="co-grid"><label class="fld"><span>Город<i>*</i></span><input type="text" name="city" placeholder="Москва" required></label>
+    <label class="fld"><span>Улица, дом, квартира<i>*</i></span><input type="text" name="addr" placeholder="ул. Покровка, 17, кв. 5" required></label></div>
+    <h2 class="co-h">3. Оплата</h2>
+    <div class="co-opts"><label class="opt"><input type="radio" name="pay" value="card" checked><span class="opt-dot"></span><span class="opt-t"><b>Картой онлайн</b><i>МИР, Visa, Mastercard</i></span><span class="opt-p"></span></label><label class="opt"><input type="radio" name="pay" value="sbp"><span class="opt-dot"></span><span class="opt-t"><b>СБП</b><i>Через приложение банка</i></span><span class="opt-p"></span></label><label class="opt"><input type="radio" name="pay" value="cash"><span class="opt-dot"></span><span class="opt-t"><b>При&nbsp;получении</b><i>Картой или наличными</i></span><span class="opt-p"></span></label></div>
+    <label class="check"><input type="checkbox" required><span class="box"></span><span>Я соглашаюсь на&nbsp;обработку персональных данных и&nbsp;получение писем от&nbsp;BRAVIS. Отписаться можно в&nbsp;любой момент. Отправляя форму, вы принимаете <a href="legal.html#terms">Условия использования</a> и&nbsp;<a href="legal.html#privacy">Политику конфиденциальности</a>.</span></label>
+    <button class="btn btn-wide" type="submit">Оплатить&nbsp;<span data-cart-total></span></button>
+  </form>
+  <aside class="summary co-sum">
+    <h2>Ваш заказ</h2>
+    <ul class="cart-list cart-list-mini" data-cart-list data-readonly></ul>
+    <div class="cart-empty" data-cart-empty><p>Корзина пуста</p><a href="shop.html" class="btn">В&nbsp;каталог</a></div>
+    <label class="promo"><input type="text" placeholder="Промокод"><button type="button" class="btn btn-grey" data-promo>Применить</button></label>
+    <div class="sum-row"><span>Товары</span><span data-cart-sub></span></div>
+    <div class="sum-row"><span>Доставка</span><span data-cart-delivery></span></div>
+    <div class="sum-row sum-total"><span>Итого</span><b data-cart-total></b></div>
+  </aside>
+  <div class="co-done" hidden>
+    <span class="done-ico"><svg viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></span>
+    <h1>Спасибо за&nbsp;заказ!</h1>
+    <p class="lead">Заказ <b data-order-no></b> оформлен. Мы&nbsp;отправили подтверждение на&nbsp;почту и&nbsp;сообщим, когда передадим его курьеру.</p>
+    <div class="done-btns"><a href="account.html" class="btn">Мои заказы</a><a href="index.html" class="pill">На&nbsp;главную</a></div>
+  </div>
+  <div class="co-done co-fail" hidden>
+    <span class="done-ico fail-ico"><svg viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></svg></span>
+    <h1>Оплата не&nbsp;прошла</h1>
+    <p class="lead">Банк отклонил платёж, деньги не&nbsp;списаны. Проверьте данные карты и&nbsp;баланс или выберите другой способ оплаты.</p>
+    <p class="fail-note">Заказ <b data-order-no></b> сохранён — оплатить его можно в&nbsp;течение 24&nbsp;часов, товары останутся за&nbsp;вами.</p>
+    <div class="done-btns"><button class="btn" data-pay-retry>Попробовать ещё раз</button><button class="pill" data-pay-back>Другой способ оплаты</button></div>
+    <p class="fail-help">Не&nbsp;получается оплатить? <a href="contact.html" class="link-under">Напишите нам</a> или позвоните +7&nbsp;900&nbsp;000-00-00</p>
+  </div>
+</section>
+<footer class="footer">
+  <a href="index.html" class="brand brand-foot"><b class="wm">BRAVIS</b><span>Основы для напитков</span></a>
+  <nav class="f-main"><a href="story.html">Наша история</a><a href="contact.html">Связаться с BRAVIS</a></nav>
+  <div class="social">
+    <a href="#" aria-label="Telegram"><svg viewBox="0 0 24 24"><path d="M21 4 3 11l6 2 2 6 3-4 5 4z"/><path d="m9 13 8-6-6 8"/></svg></a>
+    <a href="#" aria-label="ВКонтакте"><svg viewBox="0 0 24 24"><path d="M3 7h3c1 4 2.5 6 4 6.5V7h3v3.5c1.5-.3 3-2 3.6-3.5H20c-.5 2.2-2.2 4.2-3.8 5 1.6.7 3.4 2.6 4 5h-3.3c-.7-1.7-2-3.1-3.9-3.3V17c-6 0-9.5-4-10-10Z"/></svg></a>
+    <a href="#" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M4 20l1.2-4A8 8 0 1 1 8 18.8Z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.5-2-1-1 1c-1.2-.4-2.6-1.8-3-3l1-1-1-2Z"/></svg></a>
+  </div>
+  <nav class="f-legal">
+    <a href="legal.html#terms">Условия использования</a><a href="legal.html#community">Правила сообщества</a><a href="legal.html#access">Доступность</a><a href="legal.html#cookie" data-cookie>Настройки cookie</a>
+    <a href="legal.html#privacy">Политика конфиденциальности</a><a href="legal.html#consent">Согласие на обработку данных</a><a href="horeca.html">Для заведений</a><a href="vacancies.html">Вакансии</a>
+    <a href="legal.html#optout">Не передавать мои персональные данные</a>
+  </nav>
+  <div class="f-copy">
+    <span class="f-c">© BRAVIS 2026</span>
+    <span class="f-note">Основы для напитков без алкоголя. Производство в&nbsp;Москве. +7&nbsp;900&nbsp;000-00-00</span>
+  </div>
+</footer>
+<div class="menu" id="menu" aria-hidden="true">
+  <div class="menu-shade" data-close></div>
+  <aside class="menu-panel" role="dialog" aria-label="Меню">
+    <div class="menu-top">
+      <button class="ico" data-close aria-label="Закрыть"><svg viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
+      <a href="index.html" class="brand brand-menu" aria-label="BRAVIS"><b class="wm">BRAVIS</b><span>Основы для напитков</span></a>
+      <button class="ico ico-cart" data-cart-open aria-label="Корзина"><svg viewBox="0 0 24 24"><path d="M3 4h2.2l2.3 11h10.2L20 7.5H6.3"/><circle cx="9" cy="19" r="1.3"/><circle cx="17" cy="19" r="1.3"/></svg><span class="badge" data-cart-count></span></button>
+    </div>
+    <nav class="menu-list">
+      <a href="shop.html" class="m-row"><span>Купить</span><svg class="m-caret" viewBox="0 0 24 24"><path d="M10 7l5 5-5 5z"/></svg></a>
+      <a href="story.html" class="m-row"><span>Наша история</span><svg class="m-caret" viewBox="0 0 24 24"><path d="M10 7l5 5-5 5z"/></svg></a>
+      <a href="recipes.html" class="m-row"><span>Рецепты</span><svg class="m-caret" viewBox="0 0 24 24"><path d="M10 7l5 5-5 5z"/></svg></a>
+      <a href="where.html" class="m-row"><span>Где найти</span><svg class="m-caret" viewBox="0 0 24 24"><path d="M10 7l5 5-5 5z"/></svg></a>
+      <a href="journal.html" class="m-row"><span>Журнал</span><svg class="m-caret" viewBox="0 0 24 24"><path d="M10 7l5 5-5 5z"/></svg></a>
+      <a href="#" class="m-row" data-concierge><span class="m-ico"><svg viewBox="0 0 24 24"><path d="M10 4.5c.5 3.6 1.9 5 5.5 5.5-3.6.5-5 1.9-5.5 5.5-.5-3.6-1.9-5-5.5-5.5 3.6-.5 5-1.9 5.5-5.5Z"/><path d="M17.5 13.5c.3 2 1 2.7 3 3-2 .3-2.7 1-3 3-.3-2-1-2.7-3-3 2-.3 2.7-1 3-3Z"/></svg>Спросить ИИ-консьержа</span><svg class="m-caret" viewBox="0 0 24 24"><path d="M10 7l5 5-5 5z"/></svg></a>
+    </nav>
+    <div class="menu-login"><a href="login.html" data-account><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="10" r="3"/><path d="M6.5 18.2c1.3-2 3.2-3 5.5-3s4.2 1 5.5 3"/></svg><span data-account-label>Войти или создать аккаунт</span></a></div>
+    <div class="menu-foot">
+      <div class="m-lang-wrap">
+        <button class="m-lang" data-lang>Язык: русский<svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg></button>
+        <div class="m-lang-list" hidden><button class="is-on">Русский <svg viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></button><button data-lang-en>English</button></div>
+      </div>
+      <p class="m-copy">© 2026 BRAVIS</p>
+    </div>
+  </aside>
+</div>
+<div class="drawer" id="cart" aria-hidden="true">
+  <div class="menu-shade" data-cart-close></div>
+  <aside class="drawer-panel" role="dialog" aria-label="Корзина">
+    <div class="drawer-top"><h2>Корзина <span data-cart-count-text></span></h2><button class="ico" data-cart-close aria-label="Закрыть"><svg viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div>
+    <div class="ship-bar"><p data-ship-text></p><div class="ship-track"><span data-ship-fill></span></div></div>
+    <ul class="cart-list" data-cart-list></ul>
+    <div class="cart-empty" data-cart-empty><p>В&nbsp;корзине пока пусто</p><a href="shop.html" class="btn">Перейти в&nbsp;каталог</a></div>
+    <div class="drawer-foot" data-cart-foot>
+      <div class="sum-row"><span>Итого</span><b data-cart-total></b></div>
+      <a href="checkout.html" class="btn btn-wide">Оформить заказ</a>
+      <a href="cart.html" class="link-under">Перейти в&nbsp;корзину</a>
+    </div>
+  </aside>
+</div>
+
+<div class="ai" id="concierge" aria-hidden="true">
+  <div class="menu-shade" data-ai-close></div>
+  <div class="ai-card" role="dialog" aria-label="ИИ-консьерж">
+    <div class="ai-top">
+      <button class="ai-sq" data-ai-reset aria-label="В начало"><svg viewBox="0 0 24 24"><path d="M4 11 12 4l8 7M6.5 9.5V20h11V9.5"/></svg></button>
+      <span class="ai-logo"><b class="wm">BRAVIS</b></span>
+      <button class="ai-sq" data-ai-close aria-label="Закрыть"><svg viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
+    </div>
+    <div class="ai-side">
+      <div class="ai-ava"><img src="assets/bravis/hero-bartender.jpg" alt=""></div>
+      <p class="ai-name">Вера</p>
+      <p class="ai-role">ИИ-консьерж BRAVIS</p>
+      <p class="ai-status"><i></i><span data-ai-status>В&nbsp;сети</span></p>
+      <div class="ai-chips">
+        <button data-ai-ask="Подберите подарок">Подарок</button>
+        <button data-ai-ask="Какой коктейль приготовить?">Коктейли</button>
+        <button data-ai-ask="Где купить?">Купить</button>
+      </div>
+    </div>
+    <div class="ai-chat" data-ai-log></div>
+    <form class="ai-input" data-ai-form>
+      <input type="text" placeholder="Спросите о&nbsp;вкусах, рецептах или доставке" aria-label="Сообщение">
+      <button class="ai-send" aria-label="Отправить"><svg viewBox="0 0 24 24"><path d="M4 12 20 4l-4 16-4-7z"/><path d="m12 13 8-9"/></svg></button>
+    </form>
+  </div>
+</div>
+
+<div class="modal" id="modal" aria-hidden="true">
+  <div class="menu-shade" data-modal-close></div>
+  <div class="modal-card" role="dialog">
+    <button class="popup-x" data-modal-close aria-label="Закрыть"><svg viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
+    <div data-modal-body></div>
+  </div>
+</div>
+
+<template id="tpl-ebook">
+  <h2>Книга рецептов</h2>
+  <p class="m-lead">Оставьте почту — пришлём ссылку на&nbsp;скачивание.</p>
+  <form class="f-stack" data-form="ebook">
+    <label class="fld"><span>Email<i>*</i></span><input type="email" placeholder="anna@mail.ru" required></label>
+    <label class="check"><input type="checkbox" required><span class="box"></span><span>Я соглашаюсь получать рассылку BRAVIS и&nbsp;принимаю <a href="legal.html#terms">Условия использования</a>.</span></label>
+    <button class="btn btn-grey btn-wide" type="submit">Получить книгу</button>
+  </form>
+</template>
+<template id="tpl-review">
+  <h2>Ваш отзыв</h2>
+  <form class="f-stack" data-form="review">
+    <div class="rate" data-rate><button type="button" data-v="1">★</button><button type="button" data-v="2">★</button><button type="button" data-v="3">★</button><button type="button" data-v="4">★</button><button type="button" data-v="5">★</button></div>
+    <label class="fld"><span>Имя<i>*</i></span><input type="text" placeholder="Анна" required></label>
+    <label class="fld"><span>Отзыв<i>*</i></span><textarea rows="4" placeholder="Что понравилось?" required></textarea></label>
+    <button class="btn btn-grey btn-wide" type="submit">Отправить отзыв</button>
+  </form>
+</template>
+<template id="tpl-cookie">
+  <h2>Настройки cookie</h2>
+  <p class="m-lead">Мы&nbsp;используем cookie, чтобы сайт работал и&nbsp;становился удобнее. Выберите, что можно включить.</p>
+  <ul class="toggles">
+    <li><div><b>Необходимые</b><p>Корзина, вход в&nbsp;кабинет, безопасность. Отключить нельзя.</p></div><span class="tgl is-on is-locked"></span></li>
+    <li><div><b>Аналитика</b><p>Помогают понять, какие страницы полезны.</p></div><button class="tgl" type="button" data-tgl aria-label="Аналитика"></button></li>
+    <li><div><b>Маркетинг</b><p>Персональные предложения и&nbsp;реклама.</p></div><button class="tgl" type="button" data-tgl aria-label="Маркетинг"></button></li>
+  </ul>
+  <button class="btn btn-wide" data-modal-close data-toast="Настройки сохранены">Сохранить</button>
+</template>
+<div class="toast" id="toast" role="status"></div>
+<script>window.SHOP={"klyukva": {"name": "BRAVIS Клюква", "price": 887, "grad": "143deg,#F0BF9B 21.85%,#985746 100%", "img": "assets/bravis/b-klyukva.png", "url": "product-klyukva.html", "unit": "750&nbsp;мл"}, "yudzu": {"name": "BRAVIS Юдзу", "price": 882, "grad": "141deg,#E3E48D 21.33%,#6A8B31 101.9%", "img": "assets/bravis/b-yudzu.png", "url": "product-yudzu.html", "unit": "750&nbsp;мл"}, "mango": {"name": "BRAVIS Манго", "price": 890, "grad": "166deg,#FDD086 18.03%,#E35C2B 98.44%", "img": "assets/bravis/b-mango.png", "url": "product-mango.html", "unit": "750&nbsp;мл"}, "vasilki": {"name": "BRAVIS Васильки", "price": 925, "grad": "143deg,#B9D3DC 21.85%,#3D868E 100%", "img": "assets/bravis/b-vasilki.png", "url": "product-vasilki.html", "unit": "750&nbsp;мл"}, "trio": {"name": "Набор «Трио»", "price": 2490, "grad": "160deg,#E9E2C9 10%,#B6A57E 100%", "img": "assets/bravis/b-klyukva.png", "url": "shop.html", "unit": "набор", "kind": "trio"}, "book": {"name": "Книга рецептов BRAVIS", "price": 990, "grad": "160deg,#E9E2C9 10%,#B6A57E 100%", "img": "assets/bravis/b-klyukva.png", "url": "shop.html", "unit": "книга", "kind": "book"}};window.LINKS={"shop": "shop.html", "recipes": "recipes.html", "where": "where.html", "contact": "contact.html", "horeca": "horeca.html", "cart": "cart.html", "checkout": "checkout.html", "account": "account.html", "login": "login.html", "index": "index.html", "journal": "journal.html", "recipe-spritz": "recipe-spritz.html", "recipe-highball": "recipe-highball.html", "recipe-sour": "recipe-sour.html", "recipe-limonad": "recipe-limonad.html", "recipe-martini": "recipe-martini.html", "recipe-spritz-klyukva": "recipe-spritz-klyukva.html", "recipe-stir": "recipe-stir.html", "recipe-smash": "recipe-smash.html"};</script>
+<script src="site.js?v=1791176246"></script>
+</body>
+</html>

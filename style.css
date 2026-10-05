@@ -1,0 +1,354 @@
+/* Главная CLAVIS — копия сетки и типографики seedlipdrinks.com (замеры с их сайта при 1440 и 390 px).
+   Шрифты Seedlip платные, заменены ближайшими с кириллицей:
+   mollieGlaston → Cormorant Infant 500 (заголовки, выбран по доске «Шрифты заголовков» в Figma), fsNeruda → Spectral (текст), brCandor → Jost (капс, кнопки; геометрия как у brCandor, у Montserrat кириллица слишком широкая). */
+:root {
+  --brand: #154734;     /* зелёный Seedlip: текст, кнопки, подвал */
+  --deep: #0B2017;      /* бегущая строка */
+  --bg: #FFF1E4;        /* кремовый фон */
+  --surface: #FFFFFF;
+  --line: #D0D5CC;
+  --grey: #EAEAEA;
+  --grey-text: #666666;
+  --display: 'Cormorant Infant', Georgia, serif;
+  --serif: 'Spectral', Georgia, serif;
+  --sans: 'Jost', system-ui, sans-serif;
+  --pad: 80px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--bg); color: var(--brand); font: 300 22px/1.5 var(--serif); -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+ul { list-style: none; }
+button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+svg { fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.center { display: flex; justify-content: center; }
+
+/* Типографика */
+.kicker { font: 600 18px/27px var(--sans); letter-spacing: 5.4px; text-transform: uppercase; text-align: center; margin-bottom: 56px; }
+.kicker-xl { font-size: 26px; line-height: 39px; letter-spacing: 5.2px; max-width: 1062px; margin: 0 auto 72px; }
+.display { font: 500 68px/74.8px var(--display); }
+.display-sm { font-size: 56px; line-height: 67.2px; }
+.subtitle { font: 300 26px/39px var(--serif); text-align: center; }
+.lead { font: 300 22px/33px var(--serif); }
+
+/* Кнопки */
+.btn { display: inline-flex; align-items: center; justify-content: center; padding: 16px 32px; border-radius: 3px; background: var(--brand); color: #fff; font: 600 16px/19.2px var(--sans); letter-spacing: 1.6px; text-transform: uppercase; white-space: nowrap; }
+.btn-ghost { background: transparent; border: 1px solid #E5E7EB; }
+.btn-grey { background: var(--grey); color: var(--grey-text); }
+.btn-wide { width: 100%; }
+.round { width: 40px; height: 40px; border-radius: 999px; background: #fff; color: var(--brand); display: inline-flex; align-items: center; justify-content: center; }
+.round svg { width: 28px; height: 28px; }
+.round-line { width: 42px; height: 42px; border: 1px solid var(--brand); }
+.round-xl { width: 82px; height: 82px; }
+.round-xl svg { width: 40px; height: 40px; }
+
+/* Бегущая строка и шапка */
+.announce { height: 67px; background: var(--deep); color: #fff; display: flex; align-items: center; justify-content: center; font: 300 18px/27px var(--serif); }
+.nav { position: absolute; top: 67px; left: 0; right: 0; z-index: 10; height: 104px; padding: 0 48px; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; color: #fff; }
+.nav-side { display: flex; align-items: center; gap: 28px; }
+.nav-right { justify-content: flex-end; }
+.nav-link { font: 600 16px/19.2px var(--sans); letter-spacing: 1.6px; text-transform: uppercase; }
+.ico { width: 32px; height: 32px; display: inline-flex; align-items: center; justify-content: center; }
+.ico svg { width: 30px; height: 30px; }
+.nav-right .ico + .ico { margin-left: -8px; }
+.brand { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+.brand svg { width: 184px; height: auto; fill: currentColor; stroke: none; }
+.brand span { font: 600 11px/1 var(--sans); letter-spacing: 3.3px; text-transform: uppercase; }
+.wm { font: 500 42px/0.9 var(--display); letter-spacing: 0.06em; } /* текстовый логотип портфолио-версии */
+.brand-foot .wm { font-size: 66px; }
+.brand-menu .wm { font-size: 29px; }
+
+/* 1. Герой */
+.hero { position: relative; height: 800px; margin-bottom: 72px; border-bottom-left-radius: 100px; overflow: hidden; color: #fff; background: #2a1a12; }
+.hero-media { position: absolute; left: 0; right: 0; top: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; } /* кадр из видео 16:9 — показываем почти целиком */
+.hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0,0,0,.35), rgba(0,0,0,0) 60%); }
+.hero-body { position: absolute; z-index: 1; left: var(--pad); top: 50%; transform: translateY(-38%); width: 900px; }
+.hero h1 { font: 500 88px/79.2px var(--display); margin-bottom: 1px; }
+.hero p { font: 300 26px/39px var(--serif); padding-top: 10px; margin-bottom: 36px; }
+.media-ctrl { position: absolute; z-index: 1; right: 50px; bottom: 28px; display: flex; align-items: center; gap: 8px; }
+
+/* на экранах уже 1440 фото бармена сдвигаем, чтобы бутылка справа не уходила за край */
+@media (max-width: 1400px) and (min-width: 761px) { .hero-media { object-position: 60% 30%; } }
+
+/* Секции */
+.sec { padding: 0 var(--pad) 88px; }
+
+/* 2. Видео-история */
+.story-video { position: relative; height: 720px; border-radius: 0 100px; overflow: hidden; background: var(--surface); }
+.story-video img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 28%; }
+.mute { position: absolute; top: 50px; right: 50px; }
+.story-video .round-xl, .split-media .round-xl { position: absolute; left: 50%; top: 50%; margin: -41px 0 0 -41px; }
+
+/* 3. Факты */
+.facts { display: grid; grid-template-columns: repeat(3, 365px); justify-content: center; gap: 36px; }
+.facts li { display: flex; flex-direction: column; align-items: center; gap: 20px; }
+.fact-ico { width: 99px; height: 99px; border-radius: 999px; background: var(--surface); display: flex; align-items: center; justify-content: center; }
+.fact-ico svg { width: 48px; height: 49px; stroke: none; } /* штрихи заданы в самих иконках, как у Seedlip */
+.facts li > span:last-child { font: 300 22px/33px var(--serif); }
+
+/* 4. Наши вкусы */
+.sec-flavors .kicker { margin-bottom: 78px; }
+.flavors { display: grid; grid-template-columns: repeat(4, 284px); gap: 48px; }
+.flavor { display: flex; flex-direction: column; align-items: center; text-align: center; }
+.arch { position: relative; width: 284px; height: 379px; border-radius: 999px 999px 0 0; overflow: hidden; }
+.arch .bottle { position: absolute; left: 50%; bottom: -14px; height: 356px; width: auto; transform: translateX(-28%); filter: drop-shadow(0 12px 14px rgba(40, 20, 10, .25)); }
+.arch .ing { position: absolute; left: 50%; bottom: 22px; height: 210px; width: auto; transform: translateX(-118%); }
+.arch .ing-photo { height: 230px; bottom: 15px; transform: translateX(-104%); filter: drop-shadow(0 10px 12px rgba(40, 20, 10, .22)); } /* фото ингредиентов: верх — на уровне, где кончается тонкое горлышко */
+.flavor h3 { margin-top: 20px; font: 400 26px/31.2px var(--serif); }
+.flavor h3 i { font-size: 22px; }
+.flavor p { margin-top: 12px; width: 100%; min-height: 136px; padding: 13px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); font: 300 18px/27px var(--serif); } /* 4 строки: линии и кнопки в ряду на одной высоте */
+.price { margin-top: 12px; font: 400 26px/39px var(--serif); flex: 1; }
+.flavor .btn { width: 200px; margin-top: 47px; }
+.dots { display: none; }
+
+/* 5. Нам доверяют */
+.logos { display: flex; align-items: center; justify-content: space-between; gap: 40px; padding: 24px 24px 0; }
+.logos img { height: 40px; width: auto; max-width: 180px; object-fit: contain; }
+
+/* 6, 8. Текст + медиа */
+.split { display: grid; grid-template-columns: 735px 517px; gap: 28px; padding: 0 var(--pad) 88px; }
+.split-text { height: 689px; padding: 56px 72px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+.split-text .kicker { margin-bottom: 36px; }
+.split-text .display { width: 591px; margin-bottom: 36px; }
+.split-text .lead { width: 495px; margin-bottom: 48px; }
+.split-media { position: relative; height: 689px; overflow: hidden; background: #ddd; }
+.split-media img { width: 100%; height: 100%; object-fit: cover; }
+.split-story .split-text { height: 700px; }
+.split-story .split-media { margin-top: 5px; }
+
+/* 7. Рецепты */
+.sec-recipes { padding-top: 0; }
+.sec-recipes > .kicker { border-top: 1px solid var(--brand); padding-top: 72px; margin-bottom: 28px; }
+.sec-recipes .subtitle { margin-bottom: 56px; }
+.recipes { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; margin-bottom: 56px; }
+.recipe img { width: 100%; height: 399px; object-fit: cover; }
+.recipe h3 { margin-top: 20px; font: 600 14px/16.8px var(--sans); letter-spacing: 1.4px; text-transform: uppercase; }
+.recipe p { margin-top: 8px; font: italic 400 18px/21.6px var(--serif); }
+
+/* 9. Новости */
+.sec-news .kicker { margin-bottom: 36px; }
+.sec-news .display { text-align: center; margin-bottom: 72px; }
+.news { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; margin-bottom: 72px; }
+.news-item { display: flex; gap: 36px; padding-bottom: 56px; border-bottom: 1px solid var(--line); }
+.news-item img { width: 180px; height: 180px; flex: none; object-fit: cover; }
+.news-item h3 { margin-top: 8px; font: 400 26px/39px var(--serif); }
+.news-item p { margin-top: 12px; font: 300 20px/30px var(--serif); }
+
+/* 10. Подписка */
+.sec-join { padding-bottom: 72px; }
+.join { background: var(--surface); border: 1px solid var(--line); border-radius: 0 40px; padding: 56px 40px; display: flex; flex-direction: column; align-items: center; text-align: center; }
+.join .lead { width: 608px; padding: 12px 0 20px; }
+.join-form { display: flex; gap: 12px; margin-bottom: 28px; }
+.join-form input { width: 714px; }
+.join-form .btn { height: 75px; }
+input[type=email], input[type=text] { height: 75px; padding: 20px; border: 1px solid var(--line); border-radius: 3px; background: transparent; font: 300 22px/33px var(--serif); color: var(--brand); outline: none; }
+input::placeholder { color: #5f7a6d; }
+.check { display: flex; gap: 20px; text-align: left; font: 300 18px/27px var(--serif); }
+.join .check { width: 866px; }
+.box { width: 20px; height: 20px; flex: none; margin-top: 3px; border: 1px solid var(--line); border-radius: 3px; background: #fff; }
+
+/* Подвал */
+.footer { background: var(--brand); color: #fff; padding: 118px var(--pad) 88px; display: flex; flex-direction: column; align-items: center; text-align: center; }
+.brand-foot { gap: 22px; }
+.brand-foot svg { width: 288px; }
+.brand-foot span { font-size: 18px; letter-spacing: 5.4px; }
+.f-main { display: flex; gap: 36px; margin-top: 88px; font: 600 16px/19.2px var(--sans); letter-spacing: 1.6px; text-transform: uppercase; }
+.social { display: flex; gap: 32px; margin-top: 76px; }
+.social svg { width: 28px; height: 28px; }
+.f-legal { display: flex; flex-wrap: wrap; justify-content: center; gap: 63px 56px; width: 900px; margin-top: 94px; font: 400 14px/14px var(--sans); text-transform: uppercase; }
+.f-copy { width: 974px; margin-top: 72px; padding-top: 60px; border-top: 1px solid rgba(255,255,255,.2); display: flex; flex-direction: column; gap: 12px; }
+.f-c { font: 400 14px/21px var(--sans); letter-spacing: 1.4px; text-transform: uppercase; }
+.f-note { font: 300 18px/27px var(--serif); letter-spacing: 1.4px; }
+
+/* Всплывающее окно */
+.popup { position: fixed; inset: 0; z-index: 50; background: rgba(0,0,0,.6); backdrop-filter: blur(7px); display: none; align-items: center; justify-content: center; }
+.popup.is-open { display: flex; }
+.popup-card { width: 1100px; height: 743px; display: grid; grid-template-columns: 408px 1fr; background: #fff; }
+.popup-media img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 40%; }
+.popup-media { position: relative; overflow: hidden; }
+.popup-media picture { display: block; width: 100%; height: 100%; }
+.popup-body { position: relative; padding: 72px 96px 0 48px; display: flex; flex-direction: column; }
+.popup-body h2 { font: 500 44px/52.8px var(--display); }
+.popup-body > p { margin-top: 20px; font: 300 20px/30px var(--serif); }
+.popup-body label:not(.check) { display: flex; flex-direction: column; gap: 10px; margin-top: 28px; }
+.popup-body label > span:first-child { font: 600 14px/16.8px var(--sans); letter-spacing: 1.4px; text-transform: uppercase; }
+.popup-body input { width: 100%; height: 73px; border-radius: 0; font-weight: 400; }
+.p-row { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+.popup-body .check { margin-top: 28px; }
+.popup-body .check .box { width: 24px; height: 24px; }
+.popup-body .btn { margin-top: 28px; height: 51px; }
+.popup-x { position: absolute; top: 16px; right: 16px; width: 32px; height: 38px; display: flex; align-items: center; justify-content: center; }
+.popup-x svg { width: 30px; height: 30px; }
+
+/* Кадр «офер поверх первого экрана» для Figma: ?popup */
+.popup-mode { position: relative; height: 900px; overflow: hidden; }
+.popup-mode section:not(.hero), .popup-mode footer { display: none; }
+.popup-mode .hero { margin-bottom: 0; }
+.popup-mode .popup { position: absolute; }
+
+/* Главное меню — копия burger-menu Seedlip: панель 596 px слева, фон страницы затемнён и размыт */
+.menu { position: fixed; inset: 0; z-index: 60; visibility: hidden; }
+.menu.is-open { visibility: visible; }
+.menu-shade { position: absolute; inset: 0; background: rgba(0,0,0,.6); backdrop-filter: blur(7px); opacity: 0; transition: opacity .35s ease; }
+.menu-panel { position: absolute; top: 0; bottom: 0; left: 0; width: 596px; max-width: 100%; background: #fff; color: var(--brand); display: flex; flex-direction: column; transform: translateX(-100%); transition: transform .4s cubic-bezier(.2,.7,.2,1); }
+.menu.is-open .menu-shade { opacity: 1; }
+.menu.is-open .menu-panel { transform: none; }
+.menu.is-static { position: absolute; }
+.menu.is-static .menu-shade, .menu.is-static .menu-panel { transition: none; }
+.no-scroll { overflow: hidden; }
+.menu-top { height: 113px; flex: none; padding: 0 36px; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; border-bottom: 1px solid var(--line); }
+.menu-top .ico:last-child { justify-self: end; }
+.brand-menu { gap: 8px; }
+.brand-menu svg { width: 128px; }
+.brand-menu span { font-size: 9px; letter-spacing: 2.7px; }
+.menu-list { display: flex; flex-direction: column; }
+.m-row { display: flex; align-items: center; justify-content: space-between; min-height: 89px; padding: 16px 36px; border-bottom: 1px solid var(--line); font: 600 16px/19.2px var(--sans); letter-spacing: 1.6px; text-transform: uppercase; }
+.m-row:hover { background: #E8EDEA; }
+.m-row > span { display: inline-flex; align-items: center; gap: 12px; }
+.m-ico svg { width: 24px; height: 24px; }
+.m-caret { width: 20px; height: 20px; fill: currentColor; stroke: none; }
+.menu-login { padding: 36px; }
+.menu-login a { display: inline-flex; align-items: center; gap: 8px; padding-bottom: 8px; border-bottom: 1px solid var(--brand); font: 600 16px/19.2px var(--sans); letter-spacing: 1.6px; text-transform: uppercase; }
+.menu-login svg { width: 20px; height: 20px; }
+.menu-foot { margin-top: auto; }
+.m-lang { width: 100%; display: flex; align-items: center; justify-content: space-between; padding: 20px 36px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); font: 400 14px/21px var(--sans); letter-spacing: 1.4px; text-transform: uppercase; color: var(--brand); }
+.m-lang svg { width: 20px; height: 20px; fill: currentColor; stroke: none; }
+.m-copy { padding: 14px 36px; font: 300 16px/24px var(--serif); }
+
+/* ——— Мобильная версия (замеры Seedlip при 390 px) ——— */
+@media (max-width: 760px) {
+  :root { --pad: 20px; }
+  .kicker { font-size: 14px; line-height: 21px; letter-spacing: 4.2px; margin-bottom: 32px; }
+  .kicker-xl { font-size: 20px; line-height: 30px; letter-spacing: 4px; margin-bottom: 40px; }
+  .display { font-size: 40px; line-height: 44px; }
+  .display-sm { font-size: 32px; line-height: 38.4px; }
+  .subtitle { font-size: 20px; line-height: 30px; }
+  .lead { font-size: 18px; line-height: 27px; }
+  .btn { padding: 14px 24px; font-size: 14px; line-height: 16.8px; letter-spacing: 1.4px; }
+  .round-xl { width: 66px; height: 66px; }
+  .round-xl svg { width: 34px; height: 34px; }
+  .story-video .round-xl, .split-media .round-xl { margin: -33px 0 0 -33px; }
+
+  .announce { height: 48px; font-size: 14px; line-height: 21px; padding: 0 16px; text-align: center; }
+  .nav { top: 48px; height: 56px; padding: 0 16px; }
+  .nav-link, .nav-right .ico:not(:last-child) { display: none; }
+  .ico svg { width: 28px; height: 28px; }
+  .brand { gap: 6px; }
+  .brand svg { width: 112px; }
+  .brand span { font-size: 8px; letter-spacing: 2.4px; }
+  .wm { font-size: 26px; }
+
+  /* под высоту экрана телефона: на Android видно ~700 px, 48 — бегущая строка */
+  .hero { height: calc(100svh - 48px); min-height: 560px; max-height: 812px; margin-bottom: 60px; border-bottom-left-radius: 70px; }
+  .hero-media { top: -56px; height: calc(100% + 56px); object-position: 62% 50%; }
+  .hero::after { background: linear-gradient(180deg, rgba(0,0,0,.4), rgba(0,0,0,0) 45%); }
+  .hero-body { left: 20px; right: 20px; top: 136px; transform: none; width: auto; text-align: center; }
+  .hero h1 { font-size: min(46px, 11.4vw); line-height: 1; white-space: nowrap; }
+  .hero p { font-size: 20px; line-height: 30px; padding-top: 12px; margin-bottom: 20px; }
+  .media-ctrl { right: 28px; bottom: 28px; gap: 12px; }
+
+  .sec { padding: 0 20px 60px; }
+  .story-video { height: 622px; border-radius: 0 70px; }
+  .mute { top: 28px; right: 28px; }
+
+  .facts { grid-template-columns: 310px; gap: 16px; }
+  .facts li { flex-direction: row; gap: 16px; }
+  .fact-ico { width: 53px; height: 53px; }
+  .fact-ico svg { width: 32px; height: 33px; }
+  .facts li > span:last-child { font-size: 18px; line-height: 27px; }
+
+  .sec-flavors { padding-left: 0; padding-right: 0; }
+  .sec-flavors .kicker { margin-bottom: 38px; }
+  .flavors { display: flex; gap: 40px; overflow-x: auto; padding: 0 59px; scrollbar-width: none; }
+  .flavor { flex: 0 0 272px; }
+  .arch { width: 272px; height: 363px; }
+  .arch .bottle { height: 340px; }
+  .arch .ing { height: 200px; }
+  .arch .ing-photo { height: 218px; }
+  .flavor h3 { margin-top: 16px; font-size: 20px; line-height: 24px; }
+  .flavor h3 i { font-size: 18px; }
+  .flavor p { margin-top: 8px; min-height: 114px; padding: 8px 0; font-size: 16px; line-height: 24px; }
+  .price { font-size: 20px; line-height: 30px; }
+  .flavor .btn { width: 170px; margin-top: 40px; }
+  .dots { display: block; position: relative; width: 162px; height: 3px; margin: 48px auto 0; background: var(--line); }
+  .dots span { display: none; }
+  .dots .on { display: block; position: absolute; left: 0; top: 0; width: 40px; height: 3px; background: var(--brand); }
+
+  .logos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 36px 20px; justify-items: center; padding: 8px 0 0; }
+  .logos img { height: 26px; max-width: 100px; }
+
+  /* текст и медиа: заголовок — медиа — абзац — кнопка */
+  .split { display: flex; flex-direction: column; align-items: center; gap: 0; padding: 0 20px 60px; text-align: center; }
+  .split-text { display: contents; }
+  .split-text .kicker { order: 1; margin-bottom: 20px; }
+  .split-text .display { order: 2; width: 100%; margin-bottom: 32px; }
+  .split-media { order: 3; width: calc(100% + 40px); height: 622px; margin: 0 -20px 32px; }
+  .split-text .lead { order: 4; width: 302px; margin-bottom: 24px; }
+  .split-text .btn { order: 5; }
+  .split-story .split-media { width: 100%; height: 467px; margin: 0 0 31px; }
+
+  .sec-recipes > .kicker { padding-top: 60px; margin-bottom: 20px; }
+  .sec-recipes .subtitle { width: 270px; margin: 0 auto 32px; }
+  .recipes { grid-template-columns: 1fr 1fr; gap: 32px 16px; margin-bottom: 32px; }
+  .recipe img { height: 223px; }
+  .recipe h3 { margin-top: 12px; font-size: 12px; line-height: 14.4px; letter-spacing: 1.2px; }
+  .recipe p { margin-top: 4px; font-size: 14px; line-height: 16.8px; }
+
+  .sec-news .kicker { margin-bottom: 20px; }
+  .sec-news .display { margin-bottom: 40px; }
+  .news { grid-template-columns: 1fr; gap: 32px; margin-bottom: 40px; }
+  .news-item { gap: 20px; padding-bottom: 32px; }
+  .news-item img { width: 106px; height: 106px; }
+  .news-item h3 { margin-top: 0; font-size: 20px; line-height: 30px; }
+  .news-item p { margin-top: 8px; font-size: 16px; line-height: 24px; }
+
+  .sec-join { padding-bottom: 40px; }
+  .join { padding: 60px 32px 56px; border-radius: 0 40px; }
+  .join .lead { width: 284px; }
+  .join-form { flex-direction: column; gap: 8px; margin-bottom: 20px; width: 284px; }
+  .join-form input { width: 100%; }
+  .join-form .btn { height: 45px; }
+  input[type=email], input[type=text] { height: 53px; padding: 12px; font-size: 18px; line-height: 27px; }
+  .check { gap: 12px; font-size: 14px; line-height: 21px; }
+  .join .check { width: 284px; }
+
+  .footer { padding: 72px 20px 60px; }
+  .brand-foot { gap: 16px; }
+  .brand-foot svg { width: 180px; }
+  .brand-foot span { font-size: 13px; letter-spacing: 3.9px; }
+  .brand-foot .wm { font-size: 42px; }
+  .f-main { flex-direction: column; gap: 24px; margin-top: 72px; font-size: 14px; letter-spacing: 1.4px; }
+  .social { margin-top: 56px; }
+  .f-legal { flex-direction: column; align-items: center; text-align: center; gap: 28px; width: auto; margin-top: 56px; font-size: 12px; line-height: 14px; }
+  .f-copy { width: 100%; margin-top: 48px; padding-top: 40px; }
+  .f-c { font-size: 12px; }
+  .f-note { font-size: 14px; line-height: 21px; letter-spacing: 1px; }
+
+  .popup { align-items: center; padding: 16px; }
+  .popup-card { position: relative; width: 358px; max-width: 100%; height: auto; max-height: calc(100svh - 32px); overflow-y: auto; grid-template-columns: 1fr; }
+  /* фото выше, чем у Seedlip (200 px): иначе бутылки и бокала не видно */
+  /* квадратная версия фото (1080×1080), бутылка и бокал в центре; высота подстраивается,
+     чтобы кнопка влезала на экран — края неба при этом немного обрезаются */
+  .popup-media { height: max(200px, calc(100svh - 32px - 510px)); max-height: 358px; }
+  .popup-media .popup-photo { object-position: 50% 45%; }
+  .popup-body { position: static; padding: 24px 20px 20px; }
+  .popup-body h2 { font-size: 26px; line-height: 30px; padding-right: 0; }
+  .popup-body > p { margin-top: 8px; font-size: 15px; line-height: 22px; }
+  .p-row { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .popup-body label:not(.check) { margin-top: 14px; gap: 6px; }
+  .popup-body input { height: 46px; font-size: 16px; }
+  .popup-body .check { margin-top: 14px; font-size: 12px; line-height: 18px; }
+  .popup-body .btn { height: 45px; margin-top: 14px; }
+  .popup-x { position: absolute; top: 12px; right: 12px; width: 36px; height: 36px; background: #fff; border-radius: 50%; z-index: 2; }
+  .popup-x svg { width: 22px; height: 22px; }
+  .menu-panel { width: 100%; }
+  .menu-top { height: 89px; padding: 0 20px; }
+  .brand-menu svg { width: 118px; }
+  .brand-menu .wm { font-size: 26px; }
+  .m-row { min-height: 65px; padding: 16px 20px; }
+  .menu-login { padding: 20px; }
+  .m-lang { padding: 13px 20px; }
+  .m-copy { padding: 12px 20px; font-size: 14px; }
+  .popup-mode { height: 844px; }
+}

@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BRAVIS — основы для напитков без алкоголя</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Seedlip: mollieGlaston / fsNeruda / brCandor (платные) → Cormorant Infant / Spectral / Jost с кириллицей -->
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@500&family=Spectral:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=1791021188">
+<link rel="stylesheet" href="site.css?v=1791176246">
+</head>
+<body>
+
+<!-- Бегущая строка -->
+<div class="announce"><span>BRAVIS на Ozon, Wildberries и Яндекс Маркете</span></div>
+
+<!-- Шапка: как у Seedlip на обычных экранах — бургер, логотип, три иконки, без слов -->
+<header class="nav">
+  <div class="nav-side">
+    <button class="ico" id="menu-open" aria-label="Меню"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+  </div>
+  <a href="index.html" class="brand" aria-label="BRAVIS"><b class="wm">BRAVIS</b><span>Основы для напитков</span></a>
+  <div class="nav-side nav-right">
+    <button class="ico" data-concierge aria-label="ИИ-консьерж"><svg viewBox="0 0 24 24"><path d="M10 4.5c.5 3.6 1.9 5 5.5 5.5-3.6.5-5 1.9-5.5 5.5-.5-3.6-1.9-5-5.5-5.5 3.6-.5 5-1.9 5.5-5.5Z"/><path d="M17.5 13.5c.3 2 1 2.7 3 3-2 .3-2.7 1-3 3-.3-2-1-2.7-3-3 2-.3 2.7-1 3-3Z"/></svg></button>
+    <a href="login.html" class="ico" data-account aria-label="Кабинет"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="10" r="3"/><path d="M6.5 18.2c1.3-2 3.2-3 5.5-3s4.2 1 5.5 3"/></svg></a>
+    <button class="ico ico-cart" data-cart-open aria-label="Корзина"><svg viewBox="0 0 24 24"><path d="M3 4h2.2l2.3 11h10.2L20 7.5H6.3"/><circle cx="9" cy="19" r="1.3"/><circle cx="17" cy="19" r="1.3"/></svg><span class="badge" data-cart-count></span></button>
+  </div>
+</header>
+
+<!-- 1. Герой: видео на весь экран -->
+<section class="hero">
+  <video class="hero-media" src="assets/bravis/hero-bartender.mp4" poster="assets/bravis/hero-video-poster.jpg" autoplay muted playsinline preload="auto" aria-label="Бармен с основой BRAVIS «клюква, цитрус, розмарин»"></video>
+  <div class="hero-body">
+    <h1>Да, это напиток.</h1>
+    <p>Узнайте почему — с&nbsp;основами BRAVIS без&nbsp;алкоголя</p>
+    <a href="shop.html" class="btn btn-ghost">Купить сейчас</a>
+  </div>
+  <div class="media-ctrl">
+    <button class="round round-line" aria-label="Пауза" data-play><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M10 9v6M14 9v6"/></svg></button>
+    <button class="round" aria-label="Звук" data-mute><svg viewBox="0 0 24 24"><path d="M5 10h3l4-3.5v11L8 14H5z"/><path d="m15.5 10 4 4m0-4-4 4"/></svg></button>
+  </div>
+</section>
+
+<!-- 2. Видео-история -->
+<section class="sec">
+  <h2 class="kicker kicker-xl">Решаем вечный вопрос... что пить, когда не&nbsp;пьёшь, а&nbsp;хочется коктейль</h2>
+  <div class="story-video">
+    <img src="assets/bravis/story-bottles-gpt.jpg" alt="Линейка BRAVIS" style="object-position:50% 50%">
+    
+    
+  </div>
+</section>
+
+<!-- 3. Что это -->
+<section class="sec sec-facts">
+  <h2 class="kicker">Основы для напитков, переосмысленные</h2>
+  <ul class="facts">
+    <li><span class="fact-ico"><svg class="ic" viewBox="0 0 48 49" fill="none"><circle cx="24" cy="24.07" r="19.74" stroke="currentColor" stroke-width="2.52"/><path d="M32.11 14.18a1.26 1.26 0 0 0 1.78 1.78l4.5-4.5-1.78-1.78z" fill="currentColor"/><path d="M15.89 33.96a1.26 1.26 0 0 0-1.78-1.78l-4.5 4.5 1.78 1.78z" fill="currentColor"/><ellipse cx="19.6" cy="24.07" rx="3.3" ry="4.7" stroke="currentColor" stroke-width="1.9"/><circle cx="26.3" cy="20.6" r="1.55" stroke="currentColor" stroke-width="1.5"/><circle cx="30.9" cy="27.5" r="1.55" stroke="currentColor" stroke-width="1.5"/><path d="M31.4 19.3 25.8 28.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span><span>Без алкоголя</span></li>
+    <li><span class="fact-ico"><svg class="ic" viewBox="0 0 48 49" fill="none"><circle cx="29.998" cy="36.0703" r="3.24" stroke="currentColor" stroke-width="2.52"/>
+<circle cx="13.498" cy="10.5703" r="3.24" stroke="currentColor" stroke-width="2.52"/>
+<path d="M23.998 7.57031L35.998 28.3549C41.7347 25.0429 43.7024 17.6992 40.3904 11.9626C37.0783 6.22599 29.7347 4.25827 23.998 7.57031Z" stroke="currentColor" stroke-width="2.25" stroke-miterlimit="10"/>
+<path d="M33.2809 10.0568L33.572 8.97013L31.3987 8.38779L31.1075 9.47445L33.2809 10.0568ZM28.9114 17.6706C28.7506 18.2708 29.1067 18.8876 29.7069 19.0484C30.307 19.2093 30.9239 18.8531 31.0847 18.2529L28.9114 17.6706ZM31.1075 9.47445L28.9114 17.6706L31.0847 18.2529L33.2809 10.0568L31.1075 9.47445Z" fill="currentColor"/>
+<path d="M37.903 21.2457L38.9897 21.5369L39.572 19.3635L38.4854 19.0724L37.903 21.2457ZM30.2892 16.8762C29.6891 16.7154 29.0722 17.0716 28.9114 17.6717C28.7506 18.2719 29.1067 18.8887 29.7069 19.0496L30.2892 16.8762ZM38.4854 19.0724L30.2892 16.8762L29.7069 19.0496L37.903 21.2457L38.4854 19.0724Z" fill="currentColor"/>
+<path d="M29.4355 16.9886C28.8975 17.2993 28.7131 17.9873 29.0238 18.5254C29.3344 19.0635 30.0225 19.2478 30.5605 18.9372L29.4355 16.9886ZM37.2298 12.4886L29.4355 16.9886L30.5605 18.9372L38.3548 14.4372L37.2298 12.4886Z" fill="currentColor"/>
+<path d="M23.998 7.57031C29.248 6.26145 34.9346 8.51296 37.7923 13.4626C40.65 18.4123 39.7467 24.4684 35.998 28.3549" stroke="currentColor" stroke-width="1.8" stroke-miterlimit="10"/>
+<path d="M17.5879 41.3555L23.7995 18.1732C17.4012 16.4588 10.8171 20.2602 9.10261 26.6585C7.38817 33.0569 11.1895 39.641 17.5879 41.3555Z" stroke="currentColor" stroke-width="2.25" stroke-miterlimit="10"/>
+<path d="M12.7806 33.0353L11.8063 33.5978L12.9313 35.5464L13.9056 34.9839L12.7806 33.0353ZM21.2541 30.7412C21.7922 30.4306 21.9765 29.7425 21.6659 29.2044C21.3552 28.6664 20.6672 28.482 20.1291 28.7927L21.2541 30.7412ZM13.9056 34.9839L21.2541 30.7412L20.1291 28.7927L12.7806 33.0353L13.9056 34.9839Z" fill="currentColor"/>
+<path d="M17.423 21.8566L16.8605 20.8823L14.912 22.0073L15.4745 22.9816L17.423 21.8566ZM19.7171 30.3301C20.0278 30.8682 20.7158 31.0525 21.2539 30.7419C21.792 30.4312 21.9763 29.7432 21.6657 29.2051L19.7171 30.3301ZM15.4745 22.9816L19.7171 30.3301L21.6657 29.2051L17.423 21.8566L15.4745 22.9816Z" fill="currentColor"/>
+<path d="M20.4002 30.8542C21.0004 31.0151 21.6173 30.6589 21.7781 30.0587C21.9389 29.4586 21.5827 28.8417 20.9826 28.6809L20.4002 30.8542ZM11.7069 28.5249L20.4002 30.8542L20.9826 28.6809L12.2892 26.3515L11.7069 28.5249Z" fill="currentColor"/>
+<path d="M17.5879 41.3555C12.9501 38.5687 10.5211 32.9556 12.0004 27.435C13.4796 21.9144 18.4007 18.2707 23.7995 18.1733" stroke="currentColor" stroke-width="1.8" stroke-miterlimit="10"/></svg></span><span>Насыщенный вкус</span></li>
+    <li><span class="fact-ico"><svg class="ic" viewBox="0 0 48 49" fill="none"><circle cx="24" cy="24.07" r="19.74" stroke="currentColor" stroke-width="2.52"/><path d="M24 33.6c-4.9 0-7.9-3.7-7.9-8.1 0-6.1 7.9-12.6 7.9-12.6s7.9 6.5 7.9 12.6c0 4.4-3 8.1-7.9 8.1Z" stroke="currentColor" stroke-width="1.69"/><path d="M24 33.6V19.6M24 27.2l3.4-2.9M24 30.6l-3.4-2.9" stroke="currentColor" stroke-width="1.69" stroke-linecap="round"/></svg></span><span>Натуральный состав</span></li>
+  </ul>
+</section>
+
+<!-- 4. Наши вкусы. Цены — с карточек BRAVIS на Ozon (25.09.2026), на сайте BRAVIS цен нет -->
+<section class="sec sec-flavors">
+  <h2 class="kicker">Наши вкусы</h2>
+  <ul class="flavors">
+    <li class="flavor">
+      <a href="product-klyukva.html" class="arch" style="background:linear-gradient(143deg,#F0BF9B 21.85%,#985746 100%)">
+        <img class="ing ing-photo" src="assets/ing-klyukva-photo.png" alt="Клюква, апельсин, розмарин"><img class="bottle" src="assets/bravis/b-klyukva.png" alt="">
+      </a>
+      <h3>Клюква<i>, 750&nbsp;мл</i></h3>
+      <p>Терпкая клюква, сок цитрусов и&nbsp;смолистый розмарин. Яркая кислинка и&nbsp;травянистый финиш.</p>
+      <span class="price">887&nbsp;₽</span>
+      <a href="product-klyukva.html" class="btn" data-add="klyukva">Купить</a>
+    </li>
+    <li class="flavor">
+      <a href="product-yudzu.html" class="arch" style="background:linear-gradient(141deg,#E3E48D 21.33%,#6A8B31 101.9%)">
+        <img class="ing ing-photo" src="assets/ing-yudzu-photo.png" alt="Юдзу, бамбук, лемонграсс"><img class="bottle" src="assets/bravis/b-yudzu.png" alt="">
+      </a>
+      <h3>Юдзу<i>, 750&nbsp;мл</i></h3>
+      <p>Японский цитрус, зелёный бамбук и&nbsp;лемонграсс. Свежий, чуть горьковатый вкус с&nbsp;долгим прохладным финишем.</p>
+      <span class="price">882&nbsp;₽</span>
+      <a href="product-yudzu.html" class="btn" data-add="yudzu">Купить</a>
+    </li>
+    <li class="flavor">
+      <a href="product-mango.html" class="arch" style="background:linear-gradient(166deg,#FDD086 18.03%,#E35C2B 98.44%)">
+        <img class="ing ing-photo" src="assets/ing-mango-photo.png" alt="Манго, маракуйя, кокос"><img class="bottle" src="assets/bravis/b-mango.png" alt="">
+      </a>
+      <h3>Манго<i>, 750&nbsp;мл</i></h3>
+      <p>Спелое манго, маракуйя и&nbsp;сливочный кокос. Тропическая сладость, которую уравновешивает лёгкая кислота.</p>
+      <span class="price">890&nbsp;₽</span>
+      <a href="product-mango.html" class="btn" data-add="mango">Купить</a>
+    </li>
+    <li class="flavor">
+      <a href="product-vasilki.html" class="arch" style="background:linear-gradient(143deg,#B9D3DC 21.85%,#3D868E 100%)">
+        <img class="ing ing-photo" src="assets/ing-vasilki-photo.png" alt="Васильки, черёмуха, голубика"><img class="bottle" src="assets/bravis/b-vasilki.png" alt="">
+      </a>
+      <h3>Васильки<i>, 750&nbsp;мл</i></h3>
+      <p>Полевые васильки, черёмуха и&nbsp;голубика. Цветочный аромат и&nbsp;ягодная глубина — для спритца и&nbsp;холодного чая.</p>
+      <span class="price">925&nbsp;₽</span>
+      <a href="product-vasilki.html" class="btn" data-add="vasilki">Купить</a>
+    </li>
+  </ul>
+  <div class="dots"><span class="on"></span><span></span></div>
+</section>
+
+<!-- 5. Нам доверяют (у Seedlip — награды): логотипы клиентов без кругов, как на liquidclavis.com -->
+<section class="sec sec-awards">
+  <h2 class="kicker">Нам доверяют</h2>
+  <div class="logos">
+    <img src="assets/clients/novikov-dark.png" alt="Novikov Group">
+    <img src="assets/clients/pinskiy-dark.png" alt="Pinskiy &amp; Co">
+    <img src="assets/clients/vasilchuki-dark.png" alt="Васильчуки">
+    <img src="assets/clients/yakitoria-color.png" alt="Якитория">
+    <img src="assets/clients/tanuki-color.png" alt="Тануки">
+    <img src="assets/clients/moremania-color.png" alt="Моремания">
+  </div>
+</section>
+
+<!-- 6. Налить. Добавить. Смешать. -->
+<section class="split">
+  <div class="split-text">
+    <p class="kicker">Как пить</p>
+    <h2 class="display">Налить. Добавить. Смешать.</h2>
+    <p class="lead">Насыщенный вкус с&nbsp;глубиной — готовая основа для&nbsp;лимонада, коктейля или&nbsp;чая.</p>
+    <a href="recipes.html" class="btn">Все рецепты</a>
+  </div>
+  <div class="split-media">
+    <img src="assets/bravis/popup-bottle.jpg" alt="" style="object-position:50% 70%">
+    
+    
+  </div>
+</section>
+
+<!-- 7. Рецепты -->
+<section class="sec sec-recipes">
+  <p class="kicker">Рецепты BRAVIS</p>
+  <h2 class="subtitle">Тысяча способов пить по-новому</h2>
+  <div class="recipes">
+    <a href="recipe-spritz.html" class="recipe"><img src="assets/recipe-3.jpg" alt=""><h3>Спритц</h3><p>Манго</p></a>
+    <a href="recipe-highball.html" class="recipe"><img src="assets/recipe-2.jpg" alt=""><h3>Хайбол</h3><p>Васильки</p></a>
+    <a href="recipe-sour.html" class="recipe"><img src="assets/recipe-5.jpg" alt="" style="object-position:50% 75%"><h3>Сауэр</h3><p>Клюква</p></a>
+    <a href="recipe-limonad.html" class="recipe"><img src="assets/recipe-1.jpg" alt=""><h3>Лимонад</h3><p>Юдзу</p></a>
+  </div>
+  <div class="center"><a href="recipes.html" class="btn">Все рецепты</a></div>
+</section>
+
+<!-- 8. Наша история -->
+<section class="split split-story">
+  <div class="split-text">
+    <p class="kicker">Наша история</p>
+    <h2 class="display">Из цеха в&nbsp;Москве — в&nbsp;три тысячи баров</h2>
+    <p class="lead">Мы первыми в&nbsp;России создали основу для&nbsp;коктейлей: не&nbsp;сироп, а&nbsp;полноценную базу из&nbsp;натуральных ингредиентов. Вкусы собирают технологи с&nbsp;двадцатилетним опытом и&nbsp;<i>лучшие миксологи страны</i>.</p>
+    <a href="story.html" class="btn">О бренде</a>
+  </div>
+  <div class="split-media"><img src="assets/story-conveyor.jpg" alt="Линия розлива BRAVIS"></div>
+</section>
+
+<!-- 9. Новости -->
+<section class="sec sec-news">
+  <p class="kicker">Новости BRAVIS</p>
+  <h2 class="display display-sm">Новости и рецепты</h2>
+  <div class="news">
+    <a href="article-osennee-menu.html" class="news-item"><img src="assets/bravis/story-bottles-gpt.jpg" alt="" style="object-position:40% 30%"><div><h3>Сезонное меню: новые вкусы осени</h3><p>Облепиха, айва и&nbsp;пряная груша — что добавить в&nbsp;барную карту к&nbsp;холодам.</p></div></a>
+    <a href="article-tri-spritca.html" class="news-item"><img src="assets/recipe-3.jpg" alt=""><div><h3>Три способа приготовить безалкогольный спритц</h3><p>Лёгкая классика без&nbsp;градуса: основа BRAVIS, игристое без алкоголя и&nbsp;немного содовой.</p></div></a>
+  </div>
+  <div class="center"><a href="journal.html" class="btn">Читать ещё</a></div>
+</section>
+
+<!-- 10. Подписка -->
+<section class="sec sec-join">
+  <div class="join">
+    <h2 class="display display-sm">Присоединяйтесь</h2>
+    <p class="lead">Узнавайте первыми о&nbsp;новых вкусах, сезонных меню и&nbsp;предложениях.</p>
+    <form class="join-form" data-form="join">
+      <input type="email" placeholder="Введите email" required>
+      <button class="btn btn-grey" type="submit">Подписаться</button>
+    </form>
+    <label class="check"><input type="checkbox"><span class="box"></span><span>Я соглашаюсь получать рассылку BRAVIS о&nbsp;продуктах и&nbsp;событиях. Отписаться можно в&nbsp;любой момент. Подписываясь, вы принимаете <a href="legal.html#terms">Условия использования</a> и&nbsp;<a href="legal.html#privacy">Политику конфиденциальности</a>.</span></label>
+  </div>
+</section>
+
+<footer class="footer">
+  <a href="index.html" class="brand brand-foot"><b class="wm">BRAVIS</b><span>Основы для напитков</span></a>
+  <nav class="f-main"><a href="story.html">Наша история</a><a href="contact.html">Связаться с BRAVIS</a></nav>
+  <div class="social">
+    <a href="#" aria-label="Telegram"><svg viewBox="0 0 24 24"><path d="M21 4 3 11l6 2 2 6 3-4 5 4z"/><path d="m9 13 8-6-6 8"/></svg></a>
+    <a href="#" aria-label="ВКонтакте"><svg viewBox="0 0 24 24"><path d="M3 7h3c1 4 2.5 6 4 6.5V7h3v3.5c1.5-.3 3-2 3.6-3.5H20c-.5 2.2-2.2 4.2-3.8 5 1.6.7 3.4 2.6 4 5h-3.3c-.7-1.7-2-3.1-3.9-3.3V17c-6 0-9.5-4-10-10Z"/></svg></a>
+    <a href="#" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M4 20l1.2-4A8 8 0 1 1 8 18.8Z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.5-2-1-1 1c-1.2-.4-2.6-1.8-3-3l1-1-1-2Z"/></svg></a>
+  </div>
+  <nav class="f-legal">
+    <a href="legal.html#terms">Условия использования</a><a href="legal.html#community">Правила сообщества</a><a href="legal.html#access">Доступность</a><a href="legal.html#cookie" data-cookie>Настройки cookie</a>
+    <a href="legal.html#privacy">Политика конфиденциальности</a><a href="legal.html#consent">Согласие на обработку данных</a><a href="horeca.html">Для заведений</a><a href="vacancies.html">Вакансии</a>
+    <a href="legal.html#optout">Не передавать мои персональные данные</a>
+  </nav>
+  <div class="f-copy">
+    <span class="f-c">© BRAVIS 2026</span>
+    <span class="f-note">Основы для напитков без алкоголя. Производство в&nbsp;Москве. +7&nbsp;900&nbsp;000-00-00</span>
+  </div>
+</footer>
+
+
+<div class="menu" id="menu" aria-hidden="true">
+  <div class="menu-shade" data-close></div>
+  <aside class="menu-panel" role="dialog" aria-label="Меню">
+    <div class="menu-top">
+      <button class="ico" data-close aria-label="Закрыть"><svg viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
+      <a href="index.html" class="brand brand-menu" aria-label="BRAVIS"><b class="wm">BRAVIS</b><span>Основы для напитков</span></a>
+      <button class="ico ico-cart" data-cart-open aria-label="Корзина"><svg viewBox="0 0 24 24"><path d="M3 4h2.2l2.3 11h10.2L20 7.5H6.3"/><circle cx="9" cy="19" r="1.3"/><circle cx="17" cy="19" r="1.3"/></svg><span class="badge" data-cart-count></span></button>
+    </div>
+    <nav class="menu-list">
+      <a href="shop.html" class="m-row"><span>Купить</span><svg class="m-caret" viewBox="0 0 24 24"><path d="M10 7l5 5-5 5z"/></svg></a>
+      <a href="story.html" class="m-row"><span>Наша история</span><svg class="m-caret" viewBox="0 0 24 24"><path d="M10 7l5 5-5 5z"/></svg></a>
+      <a href="recipes.html" class="m-row"><span>Рецепты</span><svg class="m-caret" viewBox="0 0 24 24"><path d="M10 7l5 5-5 5z"/></svg></a>
+      <a href="where.html" class="m-row"><span>Где найти</span><svg class="m-caret" viewBox="0 0 24 24"><path d="M10 7l5 5-5 5z"/></svg></a>
+      <a href="journal.html" class="m-row"><span>Журнал</span><svg class="m-caret" viewBox="0 0 24 24"><path d="M10 7l5 5-5 5z"/></svg></a>
+      <a href="#" class="m-row" data-concierge><span class="m-ico"><svg viewBox="0 0 24 24"><path d="M10 4.5c.5 3.6 1.9 5 5.5 5.5-3.6.5-5 1.9-5.5 5.5-.5-3.6-1.9-5-5.5-5.5 3.6-.5 5-1.9 5.5-5.5Z"/><path d="M17.5 13.5c.3 2 1 2.7 3 3-2 .3-2.7 1-3 3-.3-2-1-2.7-3-3 2-.3 2.7-1 3-3Z"/></svg>Спросить ИИ-консьержа</span><svg class="m-caret" viewBox="0 0 24 24"><path d="M10 7l5 5-5 5z"/></svg></a>
+    </nav>
+    <div class="menu-login"><a href="login.html" data-account><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="10" r="3"/><path d="M6.5 18.2c1.3-2 3.2-3 5.5-3s4.2 1 5.5 3"/></svg><span data-account-label>Войти или создать аккаунт</span></a></div>
+    <div class="menu-foot">
+      <div class="m-lang-wrap">
+        <button class="m-lang" data-lang>Язык: русский<svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg></button>
+        <div class="m-lang-list" hidden><button class="is-on">Русский <svg viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></button><button data-lang-en>English</button></div>
+      </div>
+      <p class="m-copy">© 2026 BRAVIS</p>
+    </div>
+  </aside>
+</div>
+
+<!-- Всплывающее окно с офером -->
+<div class="popup" id="popup">
+  <div class="popup-card">
+    <div class="popup-media"><picture><source media="(max-width: 760px)" srcset="assets/bravis/popup-scene-square.jpg"><img class="popup-photo" src="assets/bravis/popup-scene-gpt.jpg" alt="Клюквенный спритц и основа BRAVIS"></picture></div>
+    <form class="popup-body" data-form="popup">
+      <button class="popup-x" type="button" aria-label="Закрыть"><svg viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
+      <h2>Скидка 10&nbsp;% на&nbsp;первый заказ</h2>
+      <p>Узнавайте первыми о&nbsp;новых вкусах, сезонных меню и&nbsp;предложениях!</p>
+      <div class="p-row">
+        <label><span>Имя</span><input type="text" placeholder="Анна"></label>
+        <label><span>Фамилия</span><input type="text" placeholder="Иванова"></label>
+      </div>
+      <label><span>Email</span><input type="email" placeholder="anna@mail.ru" required></label>
+      <label class="check"><input type="checkbox"><span class="box"></span><span>Я соглашаюсь получать рассылку BRAVIS и&nbsp;принимаю <a href="legal.html#terms">Условия использования</a> и&nbsp;<a href="legal.html#privacy">Политику конфиденциальности</a>.</span></label>
+      <button class="btn btn-grey btn-wide" type="submit">Получить скидку</button>
+    </form>
+  </div>
+</div>
+
+<div class="drawer" id="cart" aria-hidden="true">
+  <div class="menu-shade" data-cart-close></div>
+  <aside class="drawer-panel" role="dialog" aria-label="Корзина">
+    <div class="drawer-top"><h2>Корзина <span data-cart-count-text></span></h2><button class="ico" data-cart-close aria-label="Закрыть"><svg viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div>
+    <div class="ship-bar"><p data-ship-text></p><div class="ship-track"><span data-ship-fill></span></div></div>
+    <ul class="cart-list" data-cart-list></ul>
+    <div class="cart-empty" data-cart-empty><p>В&nbsp;корзине пока пусто</p><a href="shop.html" class="btn">Перейти в&nbsp;каталог</a></div>
+    <div class="drawer-foot" data-cart-foot>
+      <div class="sum-row"><span>Итого</span><b data-cart-total></b></div>
+      <a href="checkout.html" class="btn btn-wide">Оформить заказ</a>
+      <a href="cart.html" class="link-under">Перейти в&nbsp;корзину</a>
+    </div>
+  </aside>
+</div>
+
+<div class="ai" id="concierge" aria-hidden="true">
+  <div class="menu-shade" data-ai-close></div>
+  <div class="ai-card" role="dialog" aria-label="ИИ-консьерж">
+    <div class="ai-top">
+      <button class="ai-sq" data-ai-reset aria-label="В начало"><svg viewBox="0 0 24 24"><path d="M4 11 12 4l8 7M6.5 9.5V20h11V9.5"/></svg></button>
+      <span class="ai-logo"><b class="wm">BRAVIS</b></span>
+      <button class="ai-sq" data-ai-close aria-label="Закрыть"><svg viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
+    </div>
+    <div class="ai-side">
+      <div class="ai-ava"><img src="assets/bravis/hero-bartender.jpg" alt=""></div>
+      <p class="ai-name">Вера</p>
+      <p class="ai-role">ИИ-консьерж BRAVIS</p>
+      <p class="ai-status"><i></i><span data-ai-status>В&nbsp;сети</span></p>
+      <div class="ai-chips">
+        <button data-ai-ask="Подберите подарок">Подарок</button>
+        <button data-ai-ask="Какой коктейль приготовить?">Коктейли</button>
+        <button data-ai-ask="Где купить?">Купить</button>
+      </div>
+    </div>
+    <div class="ai-chat" data-ai-log></div>
+    <form class="ai-input" data-ai-form>
+      <input type="text" placeholder="Спросите о&nbsp;вкусах, рецептах или доставке" aria-label="Сообщение">
+      <button class="ai-send" aria-label="Отправить"><svg viewBox="0 0 24 24"><path d="M4 12 20 4l-4 16-4-7z"/><path d="m12 13 8-9"/></svg></button>
+    </form>
+  </div>
+</div>
+
+<div class="modal" id="modal" aria-hidden="true">
+  <div class="menu-shade" data-modal-close></div>
+  <div class="modal-card" role="dialog">
+    <button class="popup-x" data-modal-close aria-label="Закрыть"><svg viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
+    <div data-modal-body></div>
+  </div>
+</div>
+
+<template id="tpl-ebook">
+  <h2>Книга рецептов</h2>
+  <p class="m-lead">Оставьте почту — пришлём ссылку на&nbsp;скачивание.</p>
+  <form class="f-stack" data-form="ebook">
+    <label class="fld"><span>Email<i>*</i></span><input type="email" placeholder="anna@mail.ru" required></label>
+    <label class="check"><input type="checkbox" required><span class="box"></span><span>Я соглашаюсь получать рассылку BRAVIS и&nbsp;принимаю <a href="legal.html#terms">Условия использования</a>.</span></label>
+    <button class="btn btn-grey btn-wide" type="submit">Получить книгу</button>
+  </form>
+</template>
+<template id="tpl-review">
+  <h2>Ваш отзыв</h2>
+  <form class="f-stack" data-form="review">
+    <div class="rate" data-rate><button type="button" data-v="1">★</button><button type="button" data-v="2">★</button><button type="button" data-v="3">★</button><button type="button" data-v="4">★</button><button type="button" data-v="5">★</button></div>
+    <label class="fld"><span>Имя<i>*</i></span><input type="text" placeholder="Анна" required></label>
+    <label class="fld"><span>Отзыв<i>*</i></span><textarea rows="4" placeholder="Что понравилось?" required></textarea></label>
+    <button class="btn btn-grey btn-wide" type="submit">Отправить отзыв</button>
+  </form>
+</template>
+<template id="tpl-cookie">
+  <h2>Настройки cookie</h2>
+  <p class="m-lead">Мы&nbsp;используем cookie, чтобы сайт работал и&nbsp;становился удобнее. Выберите, что можно включить.</p>
+  <ul class="toggles">
+    <li><div><b>Необходимые</b><p>Корзина, вход в&nbsp;кабинет, безопасность. Отключить нельзя.</p></div><span class="tgl is-on is-locked"></span></li>
+    <li><div><b>Аналитика</b><p>Помогают понять, какие страницы полезны.</p></div><button class="tgl" type="button" data-tgl aria-label="Аналитика"></button></li>
+    <li><div><b>Маркетинг</b><p>Персональные предложения и&nbsp;реклама.</p></div><button class="tgl" type="button" data-tgl aria-label="Маркетинг"></button></li>
+  </ul>
+  <button class="btn btn-wide" data-modal-close data-toast="Настройки сохранены">Сохранить</button>
+</template>
+<div class="toast" id="toast" role="status"></div>
+<script>window.SHOP={"klyukva": {"name": "BRAVIS Клюква", "price": 887, "grad": "143deg,#F0BF9B 21.85%,#985746 100%", "img": "assets/bravis/b-klyukva.png", "url": "product-klyukva.html", "unit": "750&nbsp;мл"}, "yudzu": {"name": "BRAVIS Юдзу", "price": 882, "grad": "141deg,#E3E48D 21.33%,#6A8B31 101.9%", "img": "assets/bravis/b-yudzu.png", "url": "product-yudzu.html", "unit": "750&nbsp;мл"}, "mango": {"name": "BRAVIS Манго", "price": 890, "grad": "166deg,#FDD086 18.03%,#E35C2B 98.44%", "img": "assets/bravis/b-mango.png", "url": "product-mango.html", "unit": "750&nbsp;мл"}, "vasilki": {"name": "BRAVIS Васильки", "price": 925, "grad": "143deg,#B9D3DC 21.85%,#3D868E 100%", "img": "assets/bravis/b-vasilki.png", "url": "product-vasilki.html", "unit": "750&nbsp;мл"}, "trio": {"name": "Набор «Трио»", "price": 2490, "grad": "160deg,#E9E2C9 10%,#B6A57E 100%", "img": "assets/bravis/b-klyukva.png", "url": "shop.html", "unit": "набор", "kind": "trio"}, "book": {"name": "Книга рецептов BRAVIS", "price": 990, "grad": "160deg,#E9E2C9 10%,#B6A57E 100%", "img": "assets/bravis/b-klyukva.png", "url": "shop.html", "unit": "книга", "kind": "book"}};window.LINKS={"shop": "shop.html", "recipes": "recipes.html", "where": "where.html", "contact": "contact.html", "horeca": "horeca.html", "cart": "cart.html", "checkout": "checkout.html", "account": "account.html", "login": "login.html", "index": "index.html", "journal": "journal.html", "recipe-spritz": "recipe-spritz.html", "recipe-highball": "recipe-highball.html", "recipe-sour": "recipe-sour.html", "recipe-limonad": "recipe-limonad.html", "recipe-martini": "recipe-martini.html", "recipe-spritz-klyukva": "recipe-spritz-klyukva.html", "recipe-stir": "recipe-stir.html", "recipe-smash": "recipe-smash.html"};</script>
+<script src="site.js?v=1791176246"></script>
+</body>
+</html>
