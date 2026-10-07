@@ -823,15 +823,16 @@ textarea, select { font: inherit; color: inherit; }
 /* колонки сетки не сжимались уже ширины полей — форма вылезала за экран телефона */
 .co-main, .co-sum, .cart-main { min-width: 0; }
 @media (max-width: 760px) { .co, .cart-page { grid-template-columns: minmax(0, 1fr); } .acct-nav { min-width: 0; } .acct { grid-template-columns: minmax(0, 1fr); } }
-/* видео BRAVIS на телефоне: кадр 16:9 уменьшен так, чтобы бокал с рукой и бутылка (35–82 % ширины кадра)
-   влезли вместе; видео прижато к низу, верх плавно уходит в тёмный фон, текст опущен на затемнённый верх видео.
-   На низких экранах (iPhone SE) видео ужимается ещё, чтобы над ним осталось место под текст */
+/* видео BRAVIS на телефоне: кадр 16:9 во всю ширину, уменьшен так, чтобы бокал с рукой и бутылка
+   (35–82 % ширины кадра) влезли вместе; текст на видео не помещается — он стоит под видео на кремовом
+   фоне страницы, зелёным, кнопка залитая (вариант Б, выбрала она) */
 @media (max-width: 760px) {
-  .hero:has(video.hero-media) { background: #170904; }
-  video.hero-media { top: auto; bottom: 0; left: 50%; right: auto; width: auto; height: min(calc(205vw * 9 / 16), calc(100% - 290px)); aspect-ratio: 16 / 9; transform: translateX(-58.5%); object-position: 50% 50%;
-    -webkit-mask-image: linear-gradient(180deg, transparent 0, #000 22%); mask-image: linear-gradient(180deg, transparent 0, #000 22%); }
-  .hero:has(video.hero-media)::after { background: none; }
-  .hero:has(video.hero-media) .hero-body { top: auto; bottom: calc(min(calc(205vw * 9 / 16), calc(100% - 290px)) - 20px); }
+  .hero:has(video.hero-media) { height: auto; min-height: 0; max-height: none; background: var(--bg); color: var(--brand); border-bottom-left-radius: 0; padding-bottom: 44px; }
+  .hero:has(video.hero-media)::after { display: none; }
+  video.hero-media { position: relative; display: block; top: 0; left: 50%; right: auto; width: 205vw; height: auto; aspect-ratio: 16 / 9; transform: translateX(-58.5%); }
+  .hero:has(video.hero-media) .hero-body { position: relative; top: auto; left: auto; right: auto; transform: none; padding: 30px 20px 0; }
+  .hero:has(video.hero-media) .btn-ghost { background: var(--brand); border-color: var(--brand); color: #fff; }
+  .hero:has(video.hero-media) .media-ctrl { top: calc(205vw * 9 / 16 - 58px); bottom: auto; right: 28px; }
 }
 /* экран «Оплата не прошла» */
 .fail-ico { background: #B3422F; }
