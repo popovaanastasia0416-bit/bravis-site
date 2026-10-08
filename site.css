@@ -824,15 +824,15 @@ textarea, select { font: inherit; color: inherit; }
 .co-main, .co-sum, .cart-main { min-width: 0; }
 @media (max-width: 760px) { .co, .cart-page { grid-template-columns: minmax(0, 1fr); } .acct-nav { min-width: 0; } .acct { grid-template-columns: minmax(0, 1fr); } }
 /* видео BRAVIS на телефоне: кадр 16:9 во всю ширину, уменьшен так, чтобы бокал с рукой и бутылка
-   (35–82 % ширины кадра) влезли вместе; текст на видео не помещается — он стоит под видео.
+   (в видео v3 — 23–83 % ширины кадра) влезли вместе; текст на видео не помещается — он стоит под видео.
    Низ видео плавно уходит в тёмно-коричневый фон, текст белый на нём (выбрала она) */
 @media (max-width: 760px) {
   .hero:has(video.hero-media) { height: auto; min-height: 0; max-height: none; background: #170904; padding-bottom: 48px; }
   .hero:has(video.hero-media)::after { display: none; }
-  video.hero-media { position: relative; display: block; top: 0; left: 50%; right: auto; width: 205vw; height: auto; aspect-ratio: 16 / 9; transform: translateX(-58.5%);
+  video.hero-media { position: relative; display: block; top: 0; left: 50%; right: auto; width: 160vw; height: auto; aspect-ratio: 16 / 9; transform: translateX(-53%);
     -webkit-mask-image: linear-gradient(180deg, #000 72%, transparent); mask-image: linear-gradient(180deg, #000 72%, transparent); }
   .hero:has(video.hero-media) .hero-body { position: relative; top: auto; left: auto; right: auto; transform: none; margin-top: -24px; padding: 0 20px; }
-  .hero:has(video.hero-media) .media-ctrl { top: calc(205vw * 9 / 16 - 74px); bottom: auto; right: 28px; }
+  .hero:has(video.hero-media) .media-ctrl { top: calc(160vw * 9 / 16 - 132px); bottom: auto; right: 10px; flex-direction: column; gap: 10px; }
 }
 /* экран «Оплата не прошла» */
 .fail-ico { background: #B3422F; }
